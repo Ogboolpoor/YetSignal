@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+data/*.db
+data/*.db-*
+.env
+.env.local
+firmware/build/
+firmware/sdkconfig.old
+
+# Local editor/agent config
+.claude/
+
+# Rust build output
+edge/target/

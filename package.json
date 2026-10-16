@@ -1,0 +1,26 @@
+{
+  "name": "yetsignal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "YetSignal — Wi-Fi CSI sensing system. Turns existing Wi-Fi infrastructure into a privacy-preserving source of structured spatial data (presence, motion, vitals, pose).",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix web install",
+    "dev": "concurrently -k -n server,web -c blue,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:web": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "start": "npm --prefix server start",
+    "typecheck": "npm --prefix server run typecheck && npm --prefix web run typecheck",
+    "package:exe": "node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "esbuild": "^0.24.2",
+    "postject": "^1.0.0-alpha.6"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

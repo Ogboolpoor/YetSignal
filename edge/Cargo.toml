@@ -1,0 +1,20 @@
+[package]
+name = "yetsignal-edge"
+version = "0.1.0"
+edition = "2021"
+description = "YetSignal edge signal-processing & inference pipeline (NFR-07). Performance-critical CSI processing in Rust."
+license = "MIT"
+
+[lib]
+name = "yetsignal_edge"
+path = "src/lib.rs"
+
+[[bin]]
+name = "bench"
+path = "src/bin/bench.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

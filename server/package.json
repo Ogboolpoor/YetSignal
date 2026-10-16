@@ -1,0 +1,25 @@
+{
+  "name": "yetsignal-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "YetSignal local sensing server: CSI ingestion, signal pipeline, inference, REST/WebSocket API, SQLite registry, MQTT integration.",
+  "scripts": {
+    "dev": "node --experimental-sqlite --no-warnings --watch --import tsx src/index.ts",
+    "start": "node --experimental-sqlite --no-warnings --import tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mqtt": "^5.10.1",
+    "multicast-dns": "^7.2.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.5",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

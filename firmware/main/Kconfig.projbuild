@@ -1,0 +1,19 @@
+menu "YetSignal Node Configuration"
+
+    config YS_WIFI_SSID
+        string "Wi-Fi SSID"
+        default "your-ssid"
+        help
+            SSID of the access point the node joins to reach the sensing server.
+
+    config YS_WIFI_PASS
+        string "Wi-Fi password"
+        default "your-pass"
+
+    config YS_SERVER_URI
+        string "Sensing server WebSocket URI"
+        default "ws://192.168.1.10:8787/ws/node"
+        help
+            WebSocket endpoint of the local sensing server (FR-04).
+
+endmenu

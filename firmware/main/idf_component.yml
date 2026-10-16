@@ -1,0 +1,7 @@
+# Managed component dependencies (ESP-IDF v5.x). In v5 the WebSocket client and
+# mDNS were moved out of the core into the component registry, so they must be
+# declared here — `idf.py build` fetches them automatically on first build.
+dependencies:
+  idf: ">=5.0"
+  espressif/esp_websocket_client: "^1.2.0"
+  espressif/mdns: "^1.2.0"
